@@ -15,13 +15,12 @@
   }
 
   &_foto {
-    @include flex(1);
+    @include flex(2);
     @include align-self(center);
   }
 
   &_learn {
     @include flex(1);
-    @include margin-padding(null, null, all, 0 50px);
   }
 
   &_know {

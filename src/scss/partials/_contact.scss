@@ -1,0 +1,42 @@
+.contact {
+  @include flexbox;
+  @include flex-wrap(wrap);
+
+  &_title {
+    @include flex-basis(100%);
+  }
+}
+
+.form {
+  @include flex(1);
+
+  .inp {
+    @include size(100%, 50px);
+    @include margin-padding(bottom, 10px, left, 10px);
+    @include font(12px, $basic-text-color, 400, normal);
+    border: 1px solid #dadada;
+    opacity: 1;
+
+    &:focus {
+      border-color: $basic-layout-color;
+    }
+
+    &.valid {
+      border-color: $valid-color;
+    }
+
+    &.invalid {
+      border-color: $error-color;
+    }
+  }
+
+  .form_input-area {
+    @include margin-padding(null, null, top, 10px);
+    height: 200px;
+    resize: none;
+  }
+}
+
+.contact_info {
+  @include flex(1);
+}

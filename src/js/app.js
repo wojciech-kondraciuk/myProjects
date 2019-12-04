@@ -1,6 +1,7 @@
 ("use strict");
 import "../scss/main.scss";
 import "@babel/polyfill";
+import "./components/Validation";
 
 let menu = document.querySelector(".hamburger");
 

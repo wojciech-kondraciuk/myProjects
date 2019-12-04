@@ -1,0 +1,57 @@
+.projects {
+  @include flexbox;
+  @include flex-wrap(wrap);
+}
+
+.project {
+  @include flexbox;
+  @include flex-basis(49%);
+  @include box-shadow(0px, 0px, 5px, rgba(0, 0, 0, .2));
+  @include margin-padding(null, null, all, 20px);
+  height: 370px;
+  background: #ffffff;
+
+
+  &-margin {
+    @include margin-padding(all, 0 20px 20px 0, null, null);
+  }
+
+  &_desc {
+    @include margin-padding(null, null, all, 0px 20px);
+  }
+
+  &_name {
+    @include font(22px, null, bold);
+  }
+
+  &_text {
+    @include margin-padding(top, 20px, null, null);
+
+    .use {
+      @include margin-padding(all, 20px 0, null, null);
+      @include flexbox;
+      @include flex-wrap(wrap);
+
+      .use_header {
+        @include font(16px, null, bold);
+        @include flex-basis(100%);
+        @include margin-padding(bottom, 5px, null, null);
+      }
+
+      span {
+        @include font(12px, null, null);
+        @include margin-padding(right, 5px, all, 3px 5px);
+        text-transform: uppercase;
+        background-color: $projects-use-color;
+      }
+    }
+  }
+
+  .project_btn-dark {
+    background-color: $basic-text-color;
+
+    &:hover {
+      background-color: $basic-layout-color;
+    }
+  }
+}

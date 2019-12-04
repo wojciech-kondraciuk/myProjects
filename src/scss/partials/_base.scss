@@ -39,15 +39,18 @@ h3 {
 
 section {
   @include position(relative, $top: 0, $left: 0);
-  @include margin-padding(null, null, all, 50px);
+  @include margin-padding(null, null, all, 50px 20px);
   background-color: $basic-background;
 }
 
-button {
+button,
+.button {
   @include custom-button(null, null, $basic-layout-color, $button-text-color);
   @include margin-padding(null, null, all, 10px 20px);
   @include transition(.4s);
   @include font(16px, null, bold);
+  text-decoration: none;
+  display: inline-block;
 
   &:hover {
     background-color: $basic-text-color;
