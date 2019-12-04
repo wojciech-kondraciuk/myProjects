@@ -1,0 +1,40 @@
+.skills {
+  @include flexbox;
+  @include flex-wrap(wrap);
+  background-color: $skills-section-color;
+
+  &_title {
+    text-align: center;
+    border: none;
+
+    &:before {
+      left: 50%;
+      bottom: -10px;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &_foto {
+    @include flex(1);
+    @include align-self(center);
+  }
+
+  &_learn {
+    @include flex(1);
+    @include margin-padding(null, null, all, 0 50px);
+  }
+
+  &_know {
+    @include flex(1);
+  }
+
+  &_list {
+    list-style-image: url("../../src/images/li.png");
+    @include margin-padding(left, 40px, null, null);
+    text-transform: uppercase;
+
+    .skill_item {
+      @include margin-padding(all, 10px 0px, null, null);
+    }
+  }
+}

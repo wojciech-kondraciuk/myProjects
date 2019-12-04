@@ -1,0 +1,17 @@
+.about {
+  @include flexbox;
+  @include justify-content(space-around);
+  @include box-shadow(0, 0, 5px, rgba(50, 50, 50, .2));
+
+  &_foto {
+    @include flex(1);
+    @include margin-padding(null, null, right, 10px);
+    text-align: right;
+  }
+
+  &_text {
+    @include flex(2);
+    @include margin-padding(null, null, left, 10px);
+    text-align: left;
+  }
+}

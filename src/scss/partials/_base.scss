@@ -1,0 +1,55 @@
+body {
+  font-family: $font-primary;
+  @include font(16px, $basic-text-color, 400, normal);
+  background-color: $basic-background;
+
+  @include media-queries(tablet, max) {
+    @include font(14px, null, null, null);
+  }
+}
+
+.wrapper {
+  @include size(1200px, auto);
+  @include push--auto();
+
+  @include media-queries(laptop_L, max) {
+    @include size(100%, auto);
+  }
+}
+
+h1 {
+  @include font(48px, $basic-text-color, 700, null);
+  @include position(relative, $top: 0, $left: 0);
+  @include margin-padding(bottom, 50px, null, null);
+  @include size(100%, auto);
+  border-bottom: 1px solid #e3e3e9;
+
+  &:before {
+    content: "";
+    @include position(absolute, $left: 0, $bottom: -1px);
+    @include size(63px, 3px);
+    background-color: $basic-text-color;
+  }
+}
+
+h3 {
+  @include font(26px, null, 300);
+  @include margin-padding(bottom, 20px, null, null);
+}
+
+section {
+  @include position(relative, $top: 0, $left: 0);
+  @include margin-padding(null, null, all, 50px);
+  background-color: $basic-background;
+}
+
+button {
+  @include custom-button(null, null, $basic-layout-color, $button-text-color);
+  @include margin-padding(null, null, all, 10px 20px);
+  @include transition(.4s);
+  @include font(16px, null, bold);
+
+  &:hover {
+    background-color: $basic-text-color;
+  }
+}

@@ -1,0 +1,68 @@
+.header {
+  @include background-image("../../src/images/home.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.header_top {
+  @include position(fixed, $top: 0, $left: 50%);
+  @include size(1200px, auto);
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(space-around);
+  @include margin-padding(null, null, all, 10px);
+  transform: translate(-50%, 0);
+  z-index: 9;
+}
+
+.logo {
+  @include background-image("../../src/images/logo.png");
+  @include size(131px, 61px);
+  text-indent: -9999em;
+}
+
+.nav {
+  @include flexbox;
+
+  &_item {
+    text-align: center;
+    margin-left: 5px;
+  }
+
+  &_link {
+    @include font(18px, $basic-text-color, null, null);
+    @include transition(0.4s);
+    @include margin-padding(all, 0 1px, all, 30px 20px);
+    text-decoration: none;
+  }
+
+  &_link.active,
+  &_link:hover {
+    background: $basic-layout-color;
+    color: #ffffff;
+  }
+}
+
+.header_desc {
+  @include position(fixed, $top: 50%, $left: 0);
+  @include size(100%, auto);
+  @include margin-padding(null, null, left, 20px);
+  transform: translate(0, -50%);
+
+  &-title {
+    border: none;
+    font-size: 84px;
+    margin: 0;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  &-name {
+    @include font(42px, null, 300);
+    @include margin-padding(bottom, 30px, null, null);
+  }
+}
