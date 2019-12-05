@@ -1,6 +1,8 @@
 .contact {
   @include flexbox;
   @include flex-wrap(wrap);
+  @include background-image("../../src/images/contact.jpg");
+  background-size: cover;
 
   &_title {
     @include flex-basis(100%);
@@ -14,11 +16,12 @@
     @include size(100%, 50px);
     @include margin-padding(bottom, 10px, left, 10px);
     @include font(12px, $basic-text-color, 400, normal);
+    border-radius: 2px;
     border: 1px solid #dadada;
     opacity: 1;
 
     &:focus {
-      border-color: $basic-layout-color;
+      box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, .3);
     }
 
     &.valid {
@@ -39,4 +42,73 @@
 
 .contact_info {
   @include flex(1);
+}
+
+.alert {
+  @include margin-padding(bottom, 10px, null, null);
+
+  li {
+    color: $error-color;
+  }
+}
+
+.contact_info {
+  @include flexbox;
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
+  line-height: 35px;
+
+  &-name {
+    @include font(22px, null, bold);
+    @include margin-padding(bottom, 20px, null, null);
+  }
+
+  &-phone,
+  &-mail {
+    text-decoration: none;
+    letter-spacing: 1px;
+    @include font(18px, $basic-text-color, 300);
+    @include transition(.4s);
+
+    &:hover {
+      color: $basic-layout-color;
+    }
+  }
+}
+
+.other {
+  @include margin-padding(null, null, all, 50px 0px);
+  width: 100%;
+  text-align: center;
+
+  &-git,
+  &-behance,
+  &-link {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    min-width: 50px;
+    @include font(14px, $basic-text-color, 300);
+    @include margin-padding(all, 0 20px, top, 50px);
+    @include size(auto, 50px);
+    @include background-image("../../src/images/git.gif");
+    @include transition(.4s);
+    @include position(relative, $top: 0, $left: 0);
+    background-position: top center;
+
+    &:hover {
+      top: -5px;
+    }
+  }
+
+  &-behance {
+    @include background-image("../../src/images/be.gif");
+    background-position: top center;
+  }
+
+  &-link {
+    @include background-image("../../src/images/in.gif");
+    background-position: top center;
+  }
 }

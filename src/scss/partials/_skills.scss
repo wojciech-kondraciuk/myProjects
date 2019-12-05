@@ -17,6 +17,7 @@
   &_foto {
     @include flex(2);
     @include align-self(center);
+    text-align: center;
   }
 
   &_learn {

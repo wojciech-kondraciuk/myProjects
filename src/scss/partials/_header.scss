@@ -7,14 +7,18 @@
 }
 
 .header_top {
-  @include position(fixed, $top: 0, $left: 50%);
-  @include size(1200px, auto);
+  @include position(fixed, $top: 0, $left: 0);
+  @include size(100%, auto);
   @include flexbox;
   @include align-items(center);
   @include justify-content(space-around);
   @include margin-padding(null, null, all, 10px);
-  transform: translate(-50%, 0);
+  @include transition(.4s);
   z-index: 9;
+
+  &.fixed-header {
+    background-color: #ffffff;
+  }
 }
 
 .logo {

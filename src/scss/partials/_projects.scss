@@ -8,6 +8,7 @@
   @include flex-basis(49%);
   @include box-shadow(0px, 0px, 5px, rgba(0, 0, 0, .2));
   @include margin-padding(null, null, all, 20px);
+  @include position(relative, $top: 0, $left: 0);
   height: 370px;
   background: #ffffff;
 
@@ -47,11 +48,23 @@
     }
   }
 
+  &_soon {
+    @include centerer;
+    @include font(50px, null, null);
+    @include size(auto, 26px);
+    line-height: 0;
+  }
+
   .project_btn-dark {
     background-color: $basic-text-color;
 
     &:hover {
       background-color: $basic-layout-color;
     }
+  }
+
+  .project_buttons-soon {
+    color: $error-color;
+    font-weight: bold;
   }
 }

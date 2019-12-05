@@ -2,6 +2,7 @@ const form = document.querySelector(".form");
 const alert = document.querySelector(".alert");
 const popup = document.createElement("div");
 const inputAll = document.querySelectorAll(".inp");
+const textArea = document.querySelector(".form_input-area");
 
 class Validator {
   constructor(form) {
@@ -13,7 +14,7 @@ class Validator {
   displayModal(warning) {
     let md = `
       <div class="modal-content">
-        <span class="cross cross-modal"><i class="fas fa-times"></i></span>
+        <span class="cross cross-modal">x</span>
         <h1 class="modal-header">${warning}</h1>
         <button class="modal-btn">Close</button>
       </div>
@@ -62,10 +63,13 @@ class Validator {
 
     for (let i = 0; i < val.length; i++) {
       if (!val[i].match(check)) {
-        console.log(`dupa: ${val[i]}`);
+        console.log(`error: ${val[i]}`);
+        this.errors.push(textArea.dataset.error);
+        this.invalid(textArea);
         return false;
       } else {
         console.log("ok");
+        this.valid(textArea);
         return true;
       }
     }
@@ -75,6 +79,8 @@ class Validator {
     for (let i = 0; i < this.fields.length; i++) {
       this.validateFields(this.fields[i]);
     }
+
+    this.validTextarea();
 
     if (this.errors.length <= 0) {
       alert.classList.remove("invalid");
@@ -94,9 +100,8 @@ form.addEventListener("submit", e => {
   e.preventDefault();
   let valid = new Validator(form);
   let formValid = valid.validate();
-  valid.validTextarea();
   if (formValid) {
-    valid.displayModal("Mssage has been sent correctly :)");
+    valid.displayModal("Mssage has been sent:)");
     valid.clearAllInput();
   } else {
     return false;

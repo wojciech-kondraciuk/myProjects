@@ -2,11 +2,17 @@
   @include flexbox;
   @include justify-content(space-around);
   @include box-shadow(0, 0, 5px, rgba(50, 50, 50, .2));
+  background-color: $about-bg-color;
 
   &_foto {
     @include flex(1);
     @include margin-padding(null, null, right, 10px);
     text-align: right;
+  }
+
+  &_img {
+    box-shadow: -2px 4px 5px 0px rgba(50, 50, 50, .2);
+    border-radius: 50%;
   }
 
   &_text {

@@ -1,0 +1,66 @@
+.modal {
+  @include position(fixed, $top: 0, $left: 0);
+  @include size(100%, 100%);
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 9999;
+
+  .modal-content {
+    @include centerer;
+    @include size(24rem, auto);
+    @include margin-padding(null, null, all, 20px);
+    background-color: #ffffff;
+    text-align: center;
+
+    @include media-queries(phone, max) {
+      @include size(100%, auto);
+    }
+
+    .cross-modal {
+      @include font(24px, null, null);
+      @include position(absolute, $top: 10px, $right: 10px);
+      cursor: pointer;
+
+      @include media-queries(phone, max) {
+        right: auto;
+        left: 10px;
+      }
+
+      &:hover {
+        color: $error-color;
+      }
+    }
+
+    .modal-header {
+      @include font(22px, $valid-color, null);
+      border: none;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    .modal-btn {
+      @include font(16px, #ffffff);
+      @include margin-padding(null, null, all, 10px 20px);
+      @include transition(.4s);
+      cursor: pointer;
+      background-color: $basic-layout-color;
+      border: none;
+
+      &:hover {
+        background-color: $basic-text-color;
+      }
+    }
+  }
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
