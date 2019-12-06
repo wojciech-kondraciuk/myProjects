@@ -1,13 +1,12 @@
 //rwd
-$breakpoints: (
-	"mobile_S": 320px,
+$breakpoints: ("mobile_S": 320px,
     "mobile_M": 375px,
     "mobile_L": 425px,
     "tablet": 768px,
     "laptop": 1024px,
     "laptop_L": 1200px,
-    "laptop_XL": 1440px
-);
+    "laptop_XL": 1440px,
+    "laptop_old": 1680px);
 
 @mixin media-queries($width, $type: min) {
 

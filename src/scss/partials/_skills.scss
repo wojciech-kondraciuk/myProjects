@@ -18,10 +18,16 @@
     @include flex(2);
     @include align-self(center);
     text-align: center;
+
+    @include media-queries(laptop, max) {
+      @include flex-basis(100%);
+      @include margin-padding(bottom, 50px, null, null);
+    }
   }
 
   &_learn {
     @include flex(1);
+    @include margin-padding(null, null, right, 20px);
   }
 
   &_know {

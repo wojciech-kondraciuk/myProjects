@@ -4,6 +4,11 @@
   @include box-shadow(0, 0, 5px, rgba(50, 50, 50, .2));
   background-color: $about-bg-color;
 
+  @include media-queries(laptop, max) {
+    @include flex-direction(column);
+    @include align-items(center);
+  }
+
   &_foto {
     @include flex(1);
     @include margin-padding(null, null, right, 10px);
@@ -19,5 +24,9 @@
     @include flex(2);
     @include margin-padding(null, null, left, 10px);
     text-align: left;
+
+    @include media-queries(laptop, max) {
+      @include margin-padding(null, null, left, 0px);
+    }
   }
 }

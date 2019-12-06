@@ -29,6 +29,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.7.0",
     "css-loader": "^3.2.0",
+    "lodash": "^4.17.15",
     "simplelightbox": "^1.17.3",
     "style-loader": "^1.0.0"
   }

@@ -58,7 +58,7 @@ class Validator {
   }
 
   validTextarea() {
-    const check = /^[a-zA-Z?$@#()'!,+\-=_:.&€£*%\s]+$/;
+    const check = /^[0-9ąęłóężźća-zA-ĆŃÓŁŻŹĄĆ\s.,]+$/g;
     let val = [...document.querySelector(".form_input-area").value.split("\n")];
 
     for (let i = 0; i < val.length; i++) {

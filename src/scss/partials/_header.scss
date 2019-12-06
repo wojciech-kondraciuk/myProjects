@@ -16,8 +16,20 @@
   @include transition(.4s);
   z-index: 9;
 
-  &.fixed-header {
+  @include media-queries(laptop, max) {
+    padding: 0;
     background-color: #ffffff;
+    @include size(null, 50px);
+    @include box-shadow(0px, 3px, 5px, rgba(0, 0, 0, .1));
+  }
+
+  &.fixed-header {
+    @include box-shadow(0px, 3px, 5px, rgba(0, 0, 0, .1));
+    background-color: #ffffff;
+  }
+
+  &.active {
+    top: 0px;
   }
 }
 
@@ -25,14 +37,34 @@
   @include background-image("../../src/images/logo.png");
   @include size(131px, 61px);
   text-indent: -9999em;
+
+  @include media-queries(laptop, max) {
+    @include margin-padding(bottom, 20px, null, null);
+    @include position(absolute, $top: 5px, $left: 5px);
+    @include size(86px, 40px);
+    background-size: 100% auto;
+  }
 }
 
 .nav {
   @include flexbox;
 
+  @include media-queries(laptop, max) {
+    @include flex-direction(column);
+    @include size(50%, 100vh);
+    @include position(absolute, $top: 0, $left: 0);
+    @include transition(.4s);
+    background-color: rgba(0, 0, 0, .9);
+    left: -100vw;
+  }
+
   &_item {
     text-align: center;
-    margin-left: 5px;
+    @include margin-padding(left, 5px, null, null);
+
+    @include media-queries(laptop, max) {
+      @include margin-padding(all, 15px 0px, null, null);
+    }
   }
 
   &_link {
@@ -40,12 +72,22 @@
     @include transition(0.4s);
     @include margin-padding(all, 0 1px, all, 30px 20px);
     text-decoration: none;
+
+    @include media-queries(laptop, max) {
+      color: #ffffff;
+      display: block;
+      @include margin-padding(all, 0, all, 5px 0px);
+    }
   }
 
   &_link.active,
   &_link:hover {
     background: $basic-layout-color;
     color: #ffffff;
+  }
+
+  &.active {
+    left: 0;
   }
 }
 
@@ -54,6 +96,12 @@
   @include size(100%, auto);
   @include margin-padding(null, null, left, 20px);
   transform: translate(0, -50%);
+
+  @include media-queries(laptop, max) {
+    @include margin-padding(null, null, all, 20px);
+    background-color: rgba(255, 255, 255, .8);
+    text-align: center;
+  }
 
   &-title {
     border: none;
