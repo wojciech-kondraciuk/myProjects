@@ -92,7 +92,7 @@
   &_buttons {
     text-align: left;
 
-    @include media-queries(mobile_L, max) {
+    @include media-queries(tablet, max) {
       @include flexbox;
       @include justify-content(space-between);
     }
@@ -108,6 +108,11 @@
 
   .project_btn-dark {
     background-color: $basic-text-color;
+    @include margin-padding(left, 5px, null, null);
+
+    @include media-queries(mobile_L, max) {
+      @include margin-padding(left, 0px, null, null);
+    }
 
     &:hover {
       background-color: $basic-layout-color;

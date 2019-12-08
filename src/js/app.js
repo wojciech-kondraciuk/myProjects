@@ -7,14 +7,10 @@ let _ = require("lodash");
 //menu hamburger
 let menu = document.querySelector(".hamburger");
 let nav = document.querySelector(".nav");
-menu.addEventListener(
-  "click",
-  function() {
-    this.classList.toggle("hamburger--active");
+menu.addEventListener("click", function() {
+	this.classList.toggle("hamburger--active");
     nav.classList.toggle("active");
-  },
-  false
-);
+  }, false);
 
 //scroll to section
 $(".nav_link, .btn-projects").click(function(e) {
