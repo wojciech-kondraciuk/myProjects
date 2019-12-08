@@ -3,7 +3,7 @@ One of the last versions of my portfolio. Simple one page with a few projects.
 
 ## Implemented functions:
 * Scroll to element
-* Form validation(HTML5 and ES6)
+* Form validation (HTML5 and ES6)
 * RWD (flexbox, media queries)
 
 ## Use:
