@@ -17,12 +17,18 @@ body {
   }
 }
 
-h1 {
+h1,
+h2 {
   @include font(48px, $basic-text-color, 700, null);
   @include position(relative, $top: 0, $left: 0);
   @include margin-padding(bottom, 50px, null, null);
   @include size(100%, auto);
   border-bottom: 1px solid #e3e3e9;
+
+  @include media-queries(mobile_L, max) {
+    font-size: 26px;
+    @include margin-padding(bottom, 20px, bottom, 5px);
+  }
 
   &:before {
     content: "";
@@ -35,12 +41,21 @@ h1 {
 h3 {
   @include font(26px, null, 300);
   @include margin-padding(bottom, 20px, null, null);
+
+  @include media-queries(mobile_L, max) {
+    @include font(22px, null, null);
+    @include margin-padding(bottom, 10px, null, null);
+  }
 }
 
 section {
   @include position(relative, $top: 0, $left: 0);
   @include margin-padding(null, null, all, 50px 20px);
   background-color: $basic-background;
+
+  @include media-queries(mobile_L, max) {
+    @include margin-padding(null, null, all, 20px);
+  }
 }
 
 button,

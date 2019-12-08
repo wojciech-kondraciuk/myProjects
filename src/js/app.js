@@ -49,3 +49,14 @@ const lazyLoad = () => {
 
 window.addEventListener("scroll", _.throttle(lazyLoad));
 window.addEventListener("resize", _.throttle(lazyLoad));
+
+//close modal
+window.addEventListener("DOMContentLoaded", () => {
+  if ($(".modal").length) {
+    document.querySelector(".modal").addEventListener("click", function() {
+      this.remove();
+    });
+  } else {
+    return null;
+  }
+});

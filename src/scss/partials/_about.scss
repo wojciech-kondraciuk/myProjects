@@ -28,5 +28,10 @@
     @include media-queries(laptop, max) {
       @include margin-padding(null, null, left, 0px);
     }
+
+    @include media-queries(mobile_L, max) {
+      line-height: 26px;
+    }
+
   }
 }

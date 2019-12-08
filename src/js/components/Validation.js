@@ -1,7 +1,6 @@
 const form = document.querySelector(".form");
 const alert = document.querySelector(".alert");
 const popup = document.createElement("div");
-const inputAll = document.querySelectorAll(".inp");
 const textArea = document.querySelector(".form_input-area");
 
 class Validator {
@@ -9,31 +8,6 @@ class Validator {
     this.form = form;
     this.fields = this.form.querySelectorAll(".form_input");
     this.errors = [];
-  }
-
-  displayModal(warning) {
-    let md = `
-      <div class="modal-content">
-        <span class="cross cross-modal">x</span>
-        <h1 class="modal-header">${warning}</h1>
-        <button class="modal-btn">Close</button>
-      </div>
-  `;
-    popup.classList.add("modal");
-    popup.innerHTML = md;
-    document.body.appendChild(popup);
-    const modal = document.querySelector(".modal");
-    modal.classList.add("show-modal");
-
-    if (modal.classList.contains("show-modal")) {
-      modal.addEventListener("click", () => {
-        modal.classList.remove("show-modal");
-      });
-    }
-  }
-
-  clearAllInput() {
-    inputAll.forEach(item => (item.value = ""));
   }
 
   valid(field) {
@@ -97,13 +71,12 @@ class Validator {
 }
 
 form.addEventListener("submit", e => {
-  e.preventDefault();
   let valid = new Validator(form);
   let formValid = valid.validate();
   if (formValid) {
-    valid.displayModal("Mssage has been sent:)");
-    valid.clearAllInput();
+    alert.innerHTML = "";
   } else {
+    e.preventDefault();
     return false;
   }
 });

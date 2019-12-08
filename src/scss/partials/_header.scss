@@ -1,9 +1,17 @@
 .header {
   @include background-image("../../src/images/home.jpg");
   background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
+  background-position: top center;
   height: 100vh;
+
+  @include media-queries(tablet, max) {
+    @include background-image("../../src/images/home_tablet.jpg");
+  }
+
+  @include media-queries(mobile_L, max) {
+    @include background-image("../../src/images/home_mobile.jpg");
+  }
+
 }
 
 .header_top {
@@ -97,16 +105,24 @@
   @include margin-padding(null, null, left, 20px);
   transform: translate(0, -50%);
 
-  @include media-queries(laptop, max) {
-    @include margin-padding(null, null, all, 20px);
+  @include media-queries(laptop_L, max) {
     background-color: rgba(255, 255, 255, .8);
+    @include margin-padding(null, null, all, 20px);
     text-align: center;
   }
 
   &-title {
     border: none;
-    font-size: 84px;
+    @include font(84px, null, null);
     margin: 0;
+
+    @include media-queries(laptop, max) {
+      @include font(45px, null, null);
+    }
+
+    @include media-queries(mobile_L, max) {
+      @include font(28px, null, null);
+    }
 
     &:before {
       display: none;
@@ -114,7 +130,28 @@
   }
 
   &-name {
+    border: none;
     @include font(42px, null, 300);
     @include margin-padding(bottom, 30px, null, null);
+
+    @include media-queries(laptop, max) {
+      @include font(30px, null, null);
+    }
+
+    @include media-queries(mobile_L, max) {
+      @include font(16px, null, null);
+      @include margin-padding(bottom, 10px, null, null);
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+
+  .button {
+    @include media-queries(mobile_L, max) {
+      @include font(11px, null null);
+      @include margin-padding(null, null, all, 5px 10px);
+    }
   }
 }

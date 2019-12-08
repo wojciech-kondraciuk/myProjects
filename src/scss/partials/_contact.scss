@@ -4,6 +4,10 @@
   @include background-image("../../src/images/contact.jpg");
   background-size: cover;
 
+  @include media-queries(laptop, max) {
+    @include flex-direction(column);
+  }
+
   &_title {
     @include flex-basis(100%);
   }
@@ -71,6 +75,11 @@
     @include font(18px, $basic-text-color, 300);
     @include transition(.4s);
 
+    @include media-queries(mobile_L, max) {
+      @include font(14px, null, null);
+    }
+
+
     &:hover {
       color: $basic-layout-color;
     }
@@ -81,6 +90,10 @@
   @include margin-padding(null, null, all, 50px 0px);
   width: 100%;
   text-align: center;
+
+  @include media-queries(mobile_L, max) {
+    @include margin-padding(null, null, all, 20px 0px);
+  }
 
   &-git,
   &-behance,

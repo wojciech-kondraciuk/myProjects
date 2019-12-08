@@ -22,9 +22,22 @@
     @include align-items(center);
   }
 
+  @include media-queries(mobile_L, max) {
+    @include flex-basis(100%);
+  }
+
   &_foto {
     @include media-queries(laptop_XL, max) {
       @include margin-padding(bottom, 20px, null, null);
+    }
+
+    .project_img {
+      min-width: 400px;
+      @include size(100%, auto);
+
+      @include media-queries(laptop, max) {
+        min-width: 100%;
+      }
     }
   }
 
@@ -39,15 +52,27 @@
 
   &_name {
     @include font(22px, null, bold);
+
+    @include media-queries(mobile_L, max) {
+      @include font(18px, null, null);
+    }
   }
 
   &_text {
     @include margin-padding(top, 20px, null, null);
 
+    @include media-queries(mobile_L, max) {
+      @include margin-padding(top, 10px, null, null);
+    }
+
     .use {
       @include margin-padding(all, 20px 0, null, null);
       @include flexbox;
       @include flex-wrap(wrap);
+
+      @include media-queries(mobile_L, max) {
+        @include margin-padding(all, 10px 0, null, null);
+      }
 
       .use_header {
         @include font(16px, null, bold);
@@ -67,9 +92,11 @@
   &_buttons {
     text-align: left;
 
-    .project_btn-orange {
-      @include margin-padding(bottom, 5px, null, null);
+    @include media-queries(mobile_L, max) {
+      @include flexbox;
+      @include justify-content(space-between);
     }
+
   }
 
   &_soon {

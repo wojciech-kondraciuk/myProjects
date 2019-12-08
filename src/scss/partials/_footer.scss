@@ -1,0 +1,6 @@
+.footer {
+  @include font(12px, #ffffff, null);
+  @include margin-padding(null, null, all, 10px);
+  background-color: $basic-text-color;
+  text-align: center;
+}
