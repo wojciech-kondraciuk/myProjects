@@ -15,4 +15,4 @@ One of the last versions of my portfolio. Simple one page with a few projects.
 
 ## Demo online
 
-[Visit online](https://www.wojciech-kondraciuk.pl/)
+[Visit online](http://www.wojciech-kondraciuk.pl/)
