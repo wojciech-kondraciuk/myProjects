@@ -10,32 +10,29 @@
 
   &:focus {
     &>.hamburger__container {
-      box-shadow: 0 0 2px 2px #51a7e8;
+      box-shadow: 0px 0px 2px 2px #51a7e8;
     }
   }
 }
 
 .hamburger__container {
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 35px;
-  height: 30px;
+  @include flexbox;
+  @include align-items(center);
+  @include position(relative, null, null);
+  @include size(35px, 30px);
 }
 
 .hamburger__bars {
-  position: absolute;
-  width: 35px;
-  height: 2px;
+  @include position(absolute, null, null);
+  @include size(35px, 2px);
   background-color: #000000;
   transition: transform 220ms ease-in-out;
 
   &:before,
   &:after {
+    @include position(absolute, null, null);
+    @include size(35px, 2px);
     display: block;
-    position: absolute;
-    width: 35px;
-    height: 2px;
     background-color: #000000;
     content: '';
   }
@@ -60,12 +57,12 @@
     &:before {
       top: 0;
       transition: top 100ms ease-out;
-      background-color: #ff0000;
+      background-color: $error-color;
     }
 
     &:after {
       bottom: 0;
-      background-color: #ff0000;
+      background-color: $error-color;
       transform: rotate(-90deg);
       transition: bottom 100ms ease-out,
         transform 220ms 120ms ease-in-out;

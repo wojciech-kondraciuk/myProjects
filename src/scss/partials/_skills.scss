@@ -40,8 +40,8 @@
       min-width: 668px;
 
       @include media-queries(tablet, max) {
-        min-width: 100%;
         @include size(100%, auto);
+        min-width: 100%;
       }
     }
   }
@@ -60,8 +60,8 @@
   }
 
   &_list {
-    list-style-image: url("../../src/images/li.png");
     @include margin-padding(left, 40px, null, null);
+    list-style-image: url("../../src/images/li.png");
     text-transform: uppercase;
 
     .skill_item {

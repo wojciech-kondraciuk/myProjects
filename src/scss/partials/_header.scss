@@ -11,7 +11,6 @@
   @include media-queries(mobile_L, max) {
     @include background-image("../../src/images/home_mobile.jpg");
   }
-
 }
 
 .header_top {
@@ -25,10 +24,10 @@
   z-index: 9;
 
   @include media-queries(laptop, max) {
-    padding: 0;
-    background-color: #ffffff;
     @include size(null, 50px);
     @include box-shadow(0px, 3px, 5px, rgba(0, 0, 0, .1));
+    padding: 0;
+    background-color: #ffffff;
   }
 
   &.fixed-header {
@@ -67,8 +66,8 @@
   }
 
   &_item {
-    text-align: center;
     @include margin-padding(left, 5px, null, null);
+    text-align: center;
 
     @include media-queries(laptop, max) {
       @include margin-padding(all, 15px 0px, null, null);
@@ -106,14 +105,14 @@
   transform: translate(0, -50%);
 
   @include media-queries(laptop_L, max) {
-    background-color: rgba(255, 255, 255, .8);
     @include margin-padding(null, null, all, 20px);
+    background-color: rgba(255, 255, 255, .8);
     text-align: center;
   }
 
   &-title {
-    border: none;
     @include font(84px, null, null);
+    border: none;
     margin: 0;
 
     @include media-queries(laptop, max) {
@@ -130,9 +129,9 @@
   }
 
   &-name {
-    border: none;
     @include font(42px, null, 300);
     @include margin-padding(bottom, 30px, null, null);
+    border: none;
 
     @include media-queries(laptop, max) {
       @include font(30px, null, null);

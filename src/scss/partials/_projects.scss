@@ -32,8 +32,8 @@
     }
 
     .project_img {
-      min-width: 400px;
       @include size(100%, auto);
+      min-width: 400px;
 
       @include media-queries(laptop, max) {
         min-width: 100%;
@@ -96,7 +96,6 @@
       @include flexbox;
       @include justify-content(space-between);
     }
-
   }
 
   &_soon {

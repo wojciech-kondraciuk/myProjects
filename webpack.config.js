@@ -47,7 +47,7 @@ module.exports = {
       }
     ]
   },
-  
+
   plugins: [
     new MiniCssExtractPlugin({
       filename: "[name].css",
@@ -55,7 +55,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       minify: {
-        collapseWhitespace: true //minimalize or not
+        collapseWhitespace: true
       },
       hash: true,
       template: "index.html"
