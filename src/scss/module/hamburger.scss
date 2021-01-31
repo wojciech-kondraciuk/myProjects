@@ -1,0 +1,62 @@
+.menu {
+  @include absolute(top 15px right 20px);
+  width: 50px;
+  height: 50px;
+  display: none;
+
+  @include screen('tablet') {
+    display: block;
+  }
+
+  &-btn {
+    @include absolute();
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+
+    &:checked + .menu-btn-burger {
+      transform: translateX(-50px);
+      background: transparent;
+    }
+
+    &:checked + .menu-btn-burger::before {
+      transform: rotate(45deg) translate(35px, -35px);
+    }
+
+    &:checked + .menu-btn-burger::after {
+      transform: rotate(-45deg) translate(35px, 35px);
+    }
+  }
+  
+  .menu-btn-burger {
+    @include absolute(top 20px left 0px);
+    width: 50px;
+    height: 6px;
+    background: $hamburger-color;
+    border-radius: 5px;
+    transition: all .5s;
+    z-index: 0;
+
+    &:before,
+    &:after {
+      content: "";
+      @include absolute();
+      z-index: 0;
+      width: 50px;
+      height: 6px;
+      background: $hamburger-color;
+      border-radius: 5px;
+      transition: all .5s ease-in-out;
+    }
+
+    &:before {
+      transform: translateY(-16px);
+    }
+
+    &:after {
+      transform: translateY(16px);
+    }
+  }
+}
