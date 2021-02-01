@@ -2,18 +2,6 @@ body, html {
     font-family: 'Montserrat', sans-serif;
 }
 
-.height {
-    width: 100%;
-    height: 80px;
-}
-
-.section {
-    width: 100%;
-    height: 100vh;
-    margin-bottom: 20px;
-    background: cadetblue;
-}
-
 .wrapper {
     width: 1200px;
     margin:  0 auto;
@@ -21,5 +9,30 @@ body, html {
     @include screen('tablet') {
         width: 100%;
         margin: 0;
+    }
+}
+
+.button {
+    outline: none;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    border: none;
+    background: $base-color;
+    padding: 15px 20px;
+    cursor: pointer;
+    min-width: 100px;
+    text-decoration: none;
+    transition: background-color .3s linear;
+    @include font(16, #ffffff);
+
+    @include screen('tablet') {
+        @include font(24);
+        min-width: 150px;
+        min-height: 58px;
+    }
+
+    &:hover {
+        background-color: $hover-color;
     }
 }
