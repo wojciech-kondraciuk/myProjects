@@ -36,3 +36,28 @@ body, html {
         background-color: $hover-color;
     }
 }
+
+.h2 {
+    @include font(48, $text-color, 700);
+    @include relative(left 0 top 0);
+    margin-bottom: 30px;
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 20px;
+    line-height: normal;
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        @include absolute(bottom -1px left 0);
+        width: 63px;
+        height: 3px;
+        background-color: #333;
+    }
+}
+
+.section {
+    padding: 20px;
+}
