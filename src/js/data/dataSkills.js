@@ -2,7 +2,7 @@ const dataSkills = [
     {
         id: 1,
         title: 'Skills',
-        skills_1_head: 'I know and Im still learning:',
+        skills_1_head: 'I know and still learning:',
         skills_1: [
             'HTML + HTML5 + BEM',
             'CSS + SCSS + MODULES',

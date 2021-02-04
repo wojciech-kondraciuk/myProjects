@@ -8,6 +8,7 @@
 
     @include screen('tablet') {
         background-image: url('../../assets/img/top_mobile.jpg');
+        height: 100vh;
     }
 
     .home_content {
@@ -17,7 +18,7 @@
         @include screen('tablet') {
             width: 100%;
             left: 50%;
-            transform: translate(-50%, 0%);
+            transform: translate(-50%, -50%);
             text-align: center;
         }
     }
@@ -25,11 +26,19 @@
     &_header {
         @include font(70, $text-color, 700);
         margin-bottom: 15px;
+
+        @include screen('tablet') {
+            @include font(30);
+        }
     }
 
     &_title {
         @include font(35, $text-color, 400);
         display: block;
         margin-bottom: 20px;
+
+        @include screen('tablet') {
+            @include font(18);
+        }
     }
 }

@@ -6,7 +6,7 @@ const Render = () => {
         view += 'No description';
     } else {
         dataAbout.map(({ title, image, body }) => {
-            view += `
+            view = `
             <div class="wrapper about">
                 <div class="about_image">
                     <img src="${image}" alt="${title}" />

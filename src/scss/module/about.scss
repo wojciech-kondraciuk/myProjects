@@ -11,11 +11,16 @@
         &_image {
             width: 100%;
             text-align: center;
+            margin-bottom: 20px;
         }
     }
 
     &_txt {
         @include font(18, null, null, 1.7);
+
+        @include screen('tablet') {
+            @include font(16);
+        }
     }
 
 }

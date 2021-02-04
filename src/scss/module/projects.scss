@@ -1,0 +1,62 @@
+.projects_content {
+    display: flex;
+
+    @include screen('tablet') {
+        flex-direction: column;
+    }
+
+    .project {
+        display: flex;
+        flex-basis: 49%;
+        box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, .4);
+        margin: 0 20px 20px 0px;
+        padding: 20px;
+        position: relative;
+        background: #ffffff;
+
+        @include screen('tablet') {
+            flex-direction: column;
+            flex-basis: 100%;
+            margin: 0 0 20px 0px;
+        }
+
+        &:nth-child(2n) {
+            background: silver;
+            margin-right: 0px;
+        }
+
+        &_photo {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+
+            img {
+                max-width: 400px;
+
+                @include screen('tablet') {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        &_desc {
+            padding: 0 20px 20px 20px;
+        }
+
+        &_name {
+            @include font(22, null, 700);
+            margin-bottom: 20px;
+        }
+
+        &_text {
+            line-height: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        &_use {
+            background: red;
+            margin-top: 20px;
+        }
+    }
+}

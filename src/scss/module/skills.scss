@@ -13,11 +13,41 @@
     &_header {
         display: inline-block;
         width: 100%;
+        text-align: center;
+
+        &::before {
+            bottom: -1px;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
     }
 
     &_image,
     &_learn,
     &_soon {
-        margin-bottom: 20px;
+        margin-bottom: 40px;
+    }
+
+    &_image {
+        &-img {
+            max-width: 668px;
+
+            @include screen('tablet')  {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    &_title {
+       @include font(26, null, 400);
+       margin-bottom: 20px;
+    }
+
+    &_learn-list {
+        list-style: url('../../assets/img/li.png');
+        text-transform: uppercase;
+        line-height: 2.2em;
+        margin-left: 50px;
     }
 }

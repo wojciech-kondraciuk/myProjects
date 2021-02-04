@@ -39,7 +39,7 @@
 
 //media queries
 @mixin screen($size) {
-    $desktop: "(min-width: 1600px)";
+    $desktop: "(max-width: 1200px)";
     $tablet: "(max-width: 1024px)";
     $mobile: "(max-width: 768px)";
     @if $size == desktop {

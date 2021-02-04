@@ -8,19 +8,29 @@
     justify-content: space-between;
     padding: 0 20px;
     z-index: 1;
+    background-color: #ffffff;
 
     @include screen('tablet') {
         left: 0;
         width: 100%;
         transform: none;
-        background-color: #ffffff;
+        height: 40px;
+    }
+
+    .logo {
+        &_img {
+            @include screen('tablet') {
+                width: 64px;
+                height: 30px;
+            }
+        }
     }
 
     .nav_container {
         @include screen('tablet') {
             @include fixed(top 0 left 0);
             text-align: center;
-            height: 100vh;
+            height: 100%;
             width: 0%;
             background-color: rgba(0, 0, 0, .8);
             overflow-x: hidden;
@@ -50,8 +60,7 @@
                         padding: 20px 0px;
                         display: block;
                         color: #ffffff;
-                        @include font(32);
-                        margin-bottom: 50px;
+                        margin-bottom: 20px;
                     }
 
                     &.active,
@@ -63,16 +72,14 @@
             }
         }
     }
-    
 }
 
 .closebtn {
     color: #ffffff;
-    font-size: 80px;
+    font-size: 50px;
     display: none;
     text-align: right;
     padding-right: 20px;
-    margin: 20px 0px;
     cursor: pointer;
 
     @include screen('tablet') {

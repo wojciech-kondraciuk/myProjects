@@ -1,10 +1,15 @@
 body, html {
     font-family: 'Montserrat', sans-serif;
+    color: $text-color;
 }
 
 .wrapper {
     width: 1200px;
     margin:  0 auto;
+
+    @include screen('desktop') {
+        width: 1000px;
+    }
 
     @include screen('tablet') {
         width: 100%;
@@ -27,9 +32,8 @@ body, html {
     @include font(16, #ffffff);
 
     @include screen('tablet') {
-        @include font(24);
-        min-width: 150px;
-        min-height: 58px;
+        padding: 10px;
+        height: 38px;
     }
 
     &:hover {
@@ -45,12 +49,13 @@ body, html {
     padding-bottom: 20px;
     line-height: normal;
 
+    @include screen('tablet') {
+        @include font(30);
+        padding-bottom: 10px;
+    }
 
     &::before {
         content: "";
-        position: absolute;
-        bottom: -1px;
-        left: 0;
         @include absolute(bottom -1px left 0);
         width: 63px;
         height: 3px;
