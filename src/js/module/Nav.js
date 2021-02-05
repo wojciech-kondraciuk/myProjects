@@ -3,14 +3,22 @@ const $all = txt => document.querySelectorAll(`${txt}`);
 const menuBTN = $('.menu-btn');
 const navContainer = $('.nav_container');
 const closebtn = $('.closebtn');
+const mobileWidtch = (window.innerWidth > 0) ? window.innerWidth : window.screen.width;
+
 
 /* run scroll */
 const scrollTo = (el) => {
-    window.scroll({
-        behavior: 'smooth',
-        left: 0,
-        top: el.offsetTop
-    });
+    try {
+        window.scroll({
+            behavior: 'smooth',
+            left: 0,
+            top: el.offsetTop - (mobileWidtch < 1024 ? 40 : 80),
+        });
+    } catch (e) {
+        return e;
+    }
+
+    return el;
 };
 
 /* click any menu position */
@@ -18,6 +26,7 @@ $all('.nav_item').forEach((item) => {
     item.addEventListener('click', (e) => {
         e.preventDefault();
         const secName = item.children[0].className;
+
         scrollTo(document.getElementById(secName));
 
         const active = $('.active');
@@ -39,7 +48,7 @@ $all('.nav_item').forEach((item) => {
 window.addEventListener('scroll', () => {
     $all('.section').forEach((current) => {
         const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 50;
+        const sectionTop = current.offsetTop - 150;
         const sectionId = current.getAttribute('id');
 
         if (window.scrollY > sectionTop && window.scrollY <= sectionTop + sectionHeight) {

@@ -1,0 +1,71 @@
+.contact {
+    text-align: center;
+
+    &_header {
+        @include font (24, null, 700);
+        margin-bottom: 40px;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    &_tel,
+    &_mail {
+        display: block;
+        @include font (20, $text-color);
+        text-decoration: none;
+        transition: color .3s;
+        margin-bottom: 20px;
+
+        &:hover {
+            color: $base-color;
+        }
+
+        @include screen('tablet') {
+            @include font (16);
+        }
+    }
+
+    &_social {
+        background: $social-color;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 40px 0px;
+        flex-wrap: wrap;
+
+        @include screen('tablet') {
+            justify-content: space-between;
+        }
+
+        a {
+            @include font(12, $text-color);
+            text-align: center;
+            margin:  0 20px;
+            text-decoration: none;
+            position: relative;
+            transition: opacity .3s;
+            transition: color .3s;
+
+            @include screen('tablet') {
+                margin: 0;
+            }
+
+            &:hover {
+                opacity: .8;
+                color:$base-color;
+            }
+        }
+
+        img {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        &-more {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -2,8 +2,8 @@ const dataSkills = [
     {
         id: 1,
         title: 'Skills',
-        skills_1_head: 'I know and still learning:',
-        skills_1: [
+        skillsHeadOne: 'I know and still learning:',
+        skillsOne: [
             'HTML + HTML5 + BEM',
             'CSS + SCSS + MODULES',
             'JS + ES6 / JQ',
@@ -11,8 +11,8 @@ const dataSkills = [
             'GIT',
             'PHOTSHOP'
         ],
-        skills_2_head: 'Comming soon:',
-        skills_2: [
+        skillsHeadTwo: 'Comming soon:',
+        skillsTwo: [
             'React',
             'LARAVEL'
         ],

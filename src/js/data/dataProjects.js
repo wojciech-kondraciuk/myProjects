@@ -9,7 +9,7 @@ const dataProjects = [
             'scss',
             'js',
             'webpack',
-            'external API'
+            'external_API'
         ],
         live: 'http://bookstore.vot.pl/',
         source: 'https://github.com/wojciech-kondraciuk/JSshop',

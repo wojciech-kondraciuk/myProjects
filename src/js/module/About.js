@@ -1,12 +1,13 @@
 import dataAbout from '../data/dataAbout';
 
 let view = '';
+
 const Render = () => {
     if (dataAbout.length === 0) {
-        view += 'No description';
+        view = 'No description';
     } else {
-        dataAbout.map(({ title, image, body }) => {
-            view = `
+        dataAbout.forEach(({ title, image, body }) => {
+            view += `
             <div class="wrapper about">
                 <div class="about_image">
                     <img src="${image}" alt="${title}" />

@@ -1,7 +1,8 @@
-.projects_content {
+.projects {
     display: flex;
+    flex-wrap: wrap;
 
-    @include screen('tablet') {
+    @include screen('desktop') {
         flex-direction: column;
     }
 
@@ -13,6 +14,7 @@
         padding: 20px;
         position: relative;
         background: #ffffff;
+        min-height: 386px;
 
         @include screen('tablet') {
             flex-direction: column;
@@ -21,27 +23,32 @@
         }
 
         &:nth-child(2n) {
-            background: silver;
             margin-right: 0px;
         }
 
         &_photo {
-            width: 100%;
+            width: 50%;
             text-align: center;
             margin-bottom: 20px;
+            @include screen('tablet') {
+                width: 100%;
+            }
 
             img {
                 max-width: 400px;
-
-                @include screen('tablet') {
-                    width: 100%;
-                    height: auto;
-                }
+                width: 100%;
+                height: auto;
             }
         }
 
         &_desc {
             padding: 0 20px 20px 20px;
+            width: 50%;
+
+            @include screen('tablet') {
+                width: 100%;
+                padding: 0px;
+            }
         }
 
         &_name {
@@ -55,8 +62,53 @@
         }
 
         &_use {
-            background: red;
-            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px 0px;
+
+            &-header {
+                width: 100%;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+
+            span {
+                font-family: Arial, Helvetica, sans-serif;
+                @include font(11);
+                margin: 0px 5px 5px 0px;
+                padding: 7px 10px;
+                text-transform: uppercase;
+                background-color: $use-color;
+
+                @include screen('mobile') {
+                    width: 50%;
+                    margin: 0;
+                    border: 1px solid #ffffff;
+                }
+            }
+        }
+
+        &_buttons {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .button {
+                margin-bottom: 20px;
+                width: 140px;
+
+                @include screen('mobile') {
+                    margin-bottom: 0px;
+                    @include font(14);
+                    border: 1px solid #ffffff;
+                }
+            }
+
+            .soon {
+                text-align: center;
+                width: 100%;
+                @include font(18, #ff0000, 700);
+            }
         }
     }
 }

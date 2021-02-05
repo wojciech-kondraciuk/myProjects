@@ -36,6 +36,10 @@ body, html {
         height: 38px;
     }
 
+    &.button-dark {
+        background-color: #6e6e6e;
+    }
+
     &:hover {
         background-color: $hover-color;
     }
@@ -45,7 +49,6 @@ body, html {
     @include font(48, $text-color, 700);
     @include relative(left 0 top 0);
     margin-bottom: 30px;
-    border-bottom: 1px solid $border-color;
     padding-bottom: 20px;
     line-height: normal;
 
