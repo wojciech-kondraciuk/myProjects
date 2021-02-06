@@ -1,7 +1,5 @@
 .about {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+
     padding-top: 20px;
     padding-bottom: 20px;
 
@@ -17,9 +15,13 @@
 
     &_txt {
         @include font(18, null, null, 1.7);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
 
         @include screen('tablet') {
             @include font(16);
+            flex-direction: column;
         }
     }
 

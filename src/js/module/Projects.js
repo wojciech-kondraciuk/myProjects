@@ -5,7 +5,7 @@ const Render = () => {
     if (dataProjects.length === 0) {
         view = 'No description';
     } else {
-        view += '<h2 class="h2">Projects</h2>';
+        view += '<h2>Projects</h2>';
         dataProjects.forEach(({ title, body, use, live, source, image }) => {
             const btnLive = `<a href="${live}" class="button" target="_blank">Live demo</a>`;
             const btnSource = `<a href="${source}" class="button button-dark" target="_blank">Source code</a>`;

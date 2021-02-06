@@ -1,5 +1,6 @@
 .contact {
     text-align: center;
+    background: $skills-color;
 
     &_name {
         @include font (24, null, 700);
@@ -31,7 +32,7 @@
     }
 
     &_social {
-        background: $social-color;
+        background: #ffffff;
         padding: 20px;
         display: flex;
         justify-content: center;
