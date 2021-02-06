@@ -10,18 +10,6 @@
         flex-direction: column;
     }
 
-    &_header {
-        display: inline-block;
-        width: 100%;
-        text-align: center;
-
-        &::before {
-            bottom: -1px;
-            left: 50%;
-            transform: translate(-50%, 0);
-        }
-    }
-
     &_image,
     &_learn,
     &_soon {

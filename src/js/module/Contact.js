@@ -15,11 +15,12 @@ const Render = () => {
             }
 
             view = `
-                <h2 class="contact_header">${name}</h2>
+                <h2 class="contact_header h2">Contact</h2>
+                <h3 class="contact_name">${name}</h3>
                 <a class="contact_tel" href="tel:${phone.replace(/-/g, '')}">${phone}</a>
                 <a class="contact_mail" href="mailto:${email}">${email}</a>
                 <div class="contact_social">
-                <h6 class="contact_social-more">See more:</h6>
+                    <h6 class="contact_social-more">See more:</h6>
                     ${socialLinks}
                 </div>
             `;

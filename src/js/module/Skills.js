@@ -7,9 +7,7 @@ const Render = () => {
     } else {
         dataSkills.forEach(({ title, image, skillsHeadOne, skillsOne, skillsHeadTwo, skillsTwo }) => {
             view = `
-                <div class="skills_header h2">
-                    ${title}
-                </div>
+                <h2>${title}</h2>
                 <div class="skills_image">
                     <img class="skills_image-img" src="${image}" alr="${title}" />
                 </div>

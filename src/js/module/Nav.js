@@ -5,7 +5,6 @@ const navContainer = $('.nav_container');
 const closebtn = $('.closebtn');
 const mobileWidtch = (window.innerWidth > 0) ? window.innerWidth : window.screen.width;
 
-
 /* run scroll */
 const scrollTo = (el) => {
     try {
@@ -50,6 +49,7 @@ window.addEventListener('scroll', () => {
         const sectionHeight = current.offsetHeight;
         const sectionTop = current.offsetTop - 150;
         const sectionId = current.getAttribute('id');
+
 
         if (window.scrollY > sectionTop && window.scrollY <= sectionTop + sectionHeight) {
             $(`.${sectionId}`).classList.add('active');

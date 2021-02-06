@@ -60,6 +60,20 @@ const dataProjects = [
     },
     {
         id: 5,
+        title: 'My portfolio',
+        body: 'Website build with modular es6 combined with scss and data from external JSON',
+        use: [
+            'html',
+            'scss',
+            'es6',
+            'webpack_5'
+        ],
+        live: '',
+        source: 'https://github.com/wojciech-kondraciuk/myProjects',
+        image: '../../assets/img/p7.png'
+    },
+    {
+        id: 6,
         title: 'Pizza Website',
         body: 'Application in Laravel. Website with an administration panel.',
         use: [
@@ -72,7 +86,7 @@ const dataProjects = [
         image: '../../assets/img/p5.png'
     },
     {
-        id: 6,
+        id: 7,
         title: 'CMS system',
         body: 'My own cms system to manage pages.',
         use: [
@@ -83,7 +97,7 @@ const dataProjects = [
         live: '',
         source: '',
         image: '../../assets/img/p6.png'
-    }
+    },
 ];
 
 export default dataProjects;

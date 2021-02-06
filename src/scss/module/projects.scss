@@ -105,9 +105,13 @@
             }
 
             .soon {
-                text-align: center;
+                text-align: left;
                 width: 100%;
                 @include font(18, #ff0000, 700);
+
+                @include screen('mobile') {
+                    text-align: center;
+                }
             }
         }
     }

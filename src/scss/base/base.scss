@@ -45,12 +45,14 @@ body, html {
     }
 }
 
-.h2 {
+h2 {
     @include font(48, $text-color, 700);
     @include relative(left 0 top 0);
     margin-bottom: 30px;
     padding-bottom: 20px;
     line-height: normal;
+    width: 100%;
+    flex-wrap: wrap;
 
     @include screen('tablet') {
         @include font(30);

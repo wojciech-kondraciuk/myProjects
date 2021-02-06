@@ -1,12 +1,16 @@
 .contact {
     text-align: center;
 
-    &_header {
+    &_name {
         @include font (24, null, 700);
         margin-bottom: 40px;
         display: block;
         width: 100%;
         text-align: center;
+    }
+
+    &_header {
+        text-align: left;
     }
 
     &_tel,

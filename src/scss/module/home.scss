@@ -33,7 +33,7 @@
     }
 
     &_title {
-        @include font(35, $text-color, 400);
+        @include font(30, $text-color, 400);
         display: block;
         margin-bottom: 20px;
 
