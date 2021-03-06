@@ -90,12 +90,13 @@ const dataProjects = [
         title: 'CMS system',
         body: 'My own cms system to manage pages.',
         use: [
-            'php',
+            'php 7',
             'mysql',
-            'laravel',
+            'MVC',
+            'Klein / klein.php'
         ],
         live: '',
-        source: '',
+        source: 'https://github.com/wojciech-kondraciuk/php_oop_login_register',
         image: '../../assets/img/p6.png'
     },
 ];

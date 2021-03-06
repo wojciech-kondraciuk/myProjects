@@ -10,7 +10,7 @@ const Render = () => {
         dataContact.forEach(({ name, phone, email, social }) => {
             for (const i in social) {
                 if (Object.hasOwnProperty.call(social, i)) {
-                    socialLinks += `<a href="${social[i][2]}"><img src="${social[i][1]}" />${social[i][0]}</a>`;
+                    socialLinks += `<a href="${social[i][2]}" target="_blank"><img src="${social[i][1]}" />${social[i][0]}</a>`;
                 }
             }
 
