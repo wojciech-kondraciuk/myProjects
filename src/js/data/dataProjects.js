@@ -87,16 +87,29 @@ const dataProjects = [
     },
     {
         id: 7,
-        title: 'CMS system',
-        body: 'My own cms system to manage pages.',
+        title: 'LinkPedia',
+        body: 'Application for aggregating interesting links from the Internet',
         use: [
             'php 7',
             'mysql',
-            'MVC',
+            'full MVC',
             'Klein / klein.php'
         ],
-        live: '',
+        live: 'http://link.vot.pl/',
         source: 'https://github.com/wojciech-kondraciuk/php_oop_login_register',
+        image: '../../assets/img/p8.png'
+    },
+    {
+        id: 8,
+        title: 'CMS system',
+        body: 'Project in progress...',
+        use: [
+            'php 7',
+            'mysql 8',
+            'laravel 8',
+        ],
+        live: '',
+        source: 'https://github.com/wojciech-kondraciuk/laravel_admin_panel',
         image: '../../assets/img/p6.png'
     },
 ];
