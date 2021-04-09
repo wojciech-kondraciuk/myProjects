@@ -105,11 +105,13 @@ const dataProjects = [
         body: 'Project in progress...',
         use: [
             'php 7',
-            'mysql 8',
-            'laravel 8',
+            'mysql',
+            'mvc',
+            'KLEIN / KLEIN.PHP',
+            'composer',
         ],
         live: '',
-        source: 'https://github.com/wojciech-kondraciuk/laravel_admin_panel',
+        source: 'https://github.com/wojciech-kondraciuk/cmsMVC',
         image: '../../assets/img/p6.png'
     },
 ];
