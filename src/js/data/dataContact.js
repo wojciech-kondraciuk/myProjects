@@ -2,7 +2,7 @@ const dataContact = [
     {
         id: 1,
         name: 'Wojciech Kondraciuk',
-        phone: '791-418-461',
+        phone: '698-150-607',
         email: 'kontakt@wojciech-kondraciuk.pl',
         social: {
             behance: [
@@ -18,7 +18,7 @@ const dataContact = [
             github: [
                 'github',
                 '../../assets/img/git.gif',
-                'https://github.com/wojciech-kondraciuk'
+                'https://github.com/wojciech-dev'
             ],
             cv: [
                 'cv',

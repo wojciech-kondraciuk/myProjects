@@ -32,20 +32,6 @@ const dataProjects = [
     },
     {
         id: 3,
-        title: 'Offers Website',
-        body: 'My older project where I studied PHP. I know it is weak because it served me to learn about the mechanisms of language and objectivity.',
-        use: [
-            'html',
-            'scss',
-            'php',
-            'mysql',
-        ],
-        live: 'http://www.ads.vot.pl/',
-        source: 'https://github.com/wojciech-kondraciuk/SimpleAdvPHP',
-        image: '../../assets/img/p3.png'
-    },
-    {
-        id: 4,
         title: 'Build-up website',
         body: 'Website created in react using react-router. Working with components.',
         use: [
@@ -59,7 +45,7 @@ const dataProjects = [
         image: '../../assets/img/p4.png'
     },
     {
-        id: 5,
+        id: 4,
         title: 'My portfolio',
         body: 'Website build with modular es6 combined with scss and data from external JSON',
         use: [
@@ -73,7 +59,7 @@ const dataProjects = [
         image: '../../assets/img/p7.png'
     },
     {
-        id: 6,
+        id: 5,
         title: 'Pizza Website',
         body: 'Application in Laravel. Website with an administration panel.',
         use: [
@@ -86,32 +72,34 @@ const dataProjects = [
         image: '../../assets/img/p5.png'
     },
     {
-        id: 7,
+        id: 6,
         title: 'LinkPedia',
         body: 'Application for aggregating interesting links from the Internet',
         use: [
             'php 7',
             'mysql',
-            'full MVC',
-            'Klein / klein.php'
+            'MVC',
+            'Klein / klein.php',
+            'twig'
         ],
         live: 'http://link.vot.pl/',
         source: 'https://github.com/wojciech-kondraciuk/php_oop_login_register',
         image: '../../assets/img/p8.png'
     },
     {
-        id: 8,
+        id: 7,
         title: 'CMS system',
         body: 'Project in progress...',
         use: [
             'php 7',
             'mysql',
-            'mvc',
+            'MVC',
             'KLEIN / KLEIN.PHP',
             'composer',
+            'twig'
         ],
-        live: '',
-        source: 'https://github.com/wojciech-kondraciuk/cmsMVC',
+        live: 'http://mycms.vot.pl/pl/home',
+        source: 'https://github.com/wojciech-dev/php8_tests',
         image: '../../assets/img/p6.png'
     },
 ];
