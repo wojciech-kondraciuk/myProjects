@@ -10,7 +10,7 @@ One of the last versions of my portfolio. One page with a few projects.
 * HTML/HTML5 (BEM)
 * SCSS 
 * Vanilla JS
-* MOdule ES6
+* Module ES6
 * WebPack 5
 * Git
 
